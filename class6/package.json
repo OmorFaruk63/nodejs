@@ -1,0 +1,16 @@
+{
+  "name": "class6",
+  "version": "1.0.0",
+  "description": "router",
+  "main": "httpRouting.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon httpRouting.js"
+  },
+  "author": "omorfaruk",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "keywords": []
+}

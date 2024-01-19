@@ -1,10 +1,18 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const bodyParser = require("body-parser");
+const port = 3001;
 
-app.get("/", (req, res) => {
-  const { name, age, id } = req.query;
-  res.send(`i am ${name} my age is ${age} my id ${id}`);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.get("/register", (req, res) => {
+  res.sendFile(__dirname + "/register.html");
+});
+
+app.post("/register", (req, res) => {
+  const nam = req.body.fullname;
+  res.send(`<h1> wellcome ${nam}</h1>`);
 });
 
 app.listen(port, () => {
